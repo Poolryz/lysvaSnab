@@ -1,11 +1,12 @@
 import { useState } from "react";
+import logo from "../../assets/logo/LOGO.svg"
 
 function HeaderComponent() {
     const [state, setState] = useState(false);
 
     // Replace javascript:void(0) path with your path
     const navigation = [
-        { title: "Каталог", path: "javascript:void(0)" },
+        { title: "Каталог", path: "/catalog" },
         { title: "О Нас", path: "javascript:void(0)" },
         { title: "Контакты", path: "javascript:void(0)" },
         { title: "Партнёры", path: "javascript:void(0)" },
@@ -16,7 +17,7 @@ function HeaderComponent() {
                 <div className="flex justify-between">
                     <a href="javascript:void(0)">
                         <img
-                            src="LOGO.svg"
+                            src={logo}
                             width={120}
                             height={50}
                             alt="Float UI logo"
