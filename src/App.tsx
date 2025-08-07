@@ -15,7 +15,11 @@ function App() {
       <HeaderComponent />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/catalog' element={<Catalog />} />
+        <Route path='/catalog' element={<Catalog />} >
+          <Route path="soj" element={<h1>soj</h1>} />
+          <Route path="tool" element={<h1>tool</h1>} />
+          <Route path="snap-in" element={<h1>snap-in</h1>} />
+        </Route>
         <Route path='/product' element={<ProductPage />} />
         <Route path='/request' element={<RequestPage />} />
         <Route path='/admin' element={<Admin />} />

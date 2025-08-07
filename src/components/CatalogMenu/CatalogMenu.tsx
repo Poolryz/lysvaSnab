@@ -1,33 +1,33 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 function CatalogMenu() {
     return (
         <div className="bg-gray-100 py-4 shadow-md">
-            <div className="container mx-auto px-4">
+            <div className="max-w-screen-xl mx-auto px-4">
                 <nav>
                     <ul className="flex space-x-8">
                         <li>
                             <Link
-                                to=":soj"
+                                to="soj"
                                 className="text-gray-800 hover:text-blue-600 font-medium transition-colors"
                             >
                                 СОЖ
                             </Link>
                         </li>
                         <li>
-                            <a
-                                href="#"
+                            <Link
+                                to="tool"
                                 className="text-gray-800 hover:text-blue-600 font-medium transition-colors"
                             >
                                 Режущий инструмент
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#"
+                            <Link
+                                to="snap-in"
                                 className="text-gray-800 hover:text-blue-600 font-medium transition-colors"
                             >
                                 Расходка и оснастка
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>
