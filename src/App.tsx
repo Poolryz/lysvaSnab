@@ -5,8 +5,9 @@ import Catalog from './pages/Catalog.tsx'
 import ProductPage from './pages/ProductPage.tsx'
 import RequestPage from './pages/RequestPage.tsx'
 import Admin from './pages/Admin.tsx'
-import HeaderComponent from './components/HeaderComponent/HeaderComponent.tsx';
-import FooterComponent from './components/FooterComponent/FooterComponent.tsx';
+import HeaderComponent from './layouts/HeaderComponent/HeaderComponent.tsx';
+import FooterComponent from './layouts/FooterComponent/FooterComponent.tsx';
+import CatalogLayouts from './layouts/CatalogLayouts/CatalogLayouts.tsx';
 
 function App() {
 
@@ -16,16 +17,15 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/catalog' element={<Catalog />} >
-          <Route path="soj" element={<h1>soj</h1>} />
-          <Route path="tool" element={<h1>tool</h1>} />
-          <Route path="snap-in" element={<h1>snap-in</h1>} />
+          <Route path="soj" element={<CatalogLayouts name='SOJ' />} />
+          <Route path="tool" element={<CatalogLayouts name='TOOL' />} />
+          <Route path="snap-in" element={<CatalogLayouts name='SNAP-IN' />} />
         </Route>
         <Route path='/product' element={<ProductPage />} />
         <Route path='/request' element={<RequestPage />} />
         <Route path='/admin' element={<Admin />} />
       </Routes>
       <FooterComponent />
-
     </>
   )
 }
