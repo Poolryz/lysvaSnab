@@ -20,6 +20,7 @@ function App() {
           <Route path="soj" element={<CatalogLayouts name='SOJ' />} />
           <Route path="tool" element={<CatalogLayouts name='TOOL' />} />
           <Route path="snap-in" element={<CatalogLayouts name='SNAP-IN' />} />
+          <Route path="productpage" element={<ProductPage />} />
         </Route>
         <Route path='/product' element={<ProductPage />} />
         <Route path='/request' element={<RequestPage />} />
